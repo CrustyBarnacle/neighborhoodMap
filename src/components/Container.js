@@ -11,7 +11,7 @@ export class Container extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div id="main" aria-label="application">
+      <div id="main-map" aria-label="application">
         <Map google={this.props.google} />
       </div>
     );
