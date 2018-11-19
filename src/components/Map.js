@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map } from "google-maps-react";
+import PropTypes from "prop-types";
 
 class myMap extends React.Component {
   state = {
@@ -24,5 +25,11 @@ class myMap extends React.Component {
     return <div ref="map">Loading map...</div>;
   }
 }
+
+Map.PropTypes = {
+  google: PropTypes.object,
+  zoom: PropTypes.number,
+  center: PropTypes.object
+};
 
 export default Map;
