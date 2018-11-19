@@ -1,2 +1,0 @@
-# neighborhoodMap
-Created with CodeSandbox
