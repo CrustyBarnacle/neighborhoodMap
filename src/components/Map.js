@@ -1,14 +1,22 @@
 import React, { Component } from "react";
 
 class Map extends React.Component {
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.google !== this.props.google) {
-      this.loadMap();
+  state = {
+    zoom: 14,
+    center: {
+      lat: 37.774929,
+      lng: -122.419416
     }
-  }
+  };
 
   loadMap() {
-    console.log("Map loading...");
+    const { google } = this.props;
+    const mapRef = this.refs.map;
+
+    this.map = new google.maps.Map(ReactDOM.findDOMNode(mapRef), {
+      center: center,
+      zoom: zoom
+    });
   }
 
   render() {
