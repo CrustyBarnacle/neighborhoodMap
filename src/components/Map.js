@@ -4,8 +4,10 @@ import { Map } from "google-maps-react";
 class myMap extends React.Component {
   state = {
     zoom: 14,
-    lat: 37.774929,
-    lng: -122.419416
+    center: {
+      lat: 37.774929,
+      lng: -122.419416
+    }
   };
 
   loadMap() {
