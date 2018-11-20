@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Map } from "google-maps-react";
 import PropTypes from "prop-types";
 
-class myMap extends React.Component {
+class MyMap extends React.Component {
   state = {
     zoom: 14,
     center: {
@@ -15,7 +15,7 @@ class myMap extends React.Component {
     const { google } = this.props;
     const mapRef = this.refs.map;
 
-    this.map = new google.maps.Map(ReactDOM.findDOMNode(mapRef), {
+    this.map = new maps.Map(ReactDOM.findDOMNode(mapRef), {
       center: this.state.center,
       zoom: this.state.zoom
     });
@@ -29,7 +29,7 @@ class myMap extends React.Component {
 Map.PropTypes = {
   google: PropTypes.object,
   zoom: PropTypes.number,
-  center: PropTypes.object
+  center: PropTypes.number
 };
 
 export default Map;
